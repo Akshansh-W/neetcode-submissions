@@ -1,0 +1,15 @@
+class Solution {
+    public int scoreOfString(String s) {
+      int i=0,j=1,score=0;
+      while(j < s.length()){
+        if(s.charAt(i) > s.charAt(j) ){
+        score += Math.abs( (int)s.charAt(i) - (int)s.charAt(j) );
+        }else{
+          score += Math.abs( (int)s.charAt(j) - (int)s.charAt(i) );
+        }
+        i++;
+        j++;
+      }
+      return score;
+    }
+}
